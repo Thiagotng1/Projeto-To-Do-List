@@ -1,0 +1,289 @@
+:root {
+    --texto-primario: #331F19;
+    --texto-secundario: #504e4d;
+    --texto-invertido: #F4F0EA;
+
+    --botao-bg: #f4f0eaad;
+    --botao-bg-hover: #F4F0EA;
+    --botao-texto: #504e4d;
+
+    --remover-bg: #A34743;
+    --remover-bg-hover: #60041A;
+
+    --editar-bg: #331F19;
+    --editar-bg-hover: #744d41;
+
+    --input-borda: #8B7D70;
+    --input-shadow: #8b7d70bb;
+    --input-focus: #60041A;
+
+    --item-fundo: #F4F0EA;
+    --item-feito-texto: gray;
+    --item-feito-opacity: 0.5;
+
+    --footer-bg: #9c8f81;
+    --footer-texto: #F4F0EA;
+
+    --sombra: rgba(139, 125, 112, 0.473);
+    --borda-container: #8b7d707c;
+
+    --cor-fundo-header: #F4F0EA;
+    --cor-texto-header: #331F19;
+    --cor-borda: #8B7D70;
+    --cor-hover: #e0dcd4;
+    --cor-fundo-body: #F4F0EA;
+    --cor-fundo-container: #dfd8cc;
+}
+.tema-escuro {
+    --texto-primario: #F4F0EA;
+    --texto-secundario: #C2BEB6;
+    --texto-invertido: #2C1E1A;
+
+    --botao-bg: #5A504B;
+    --botao-bg-hover: #6B5F58;
+    --botao-texto: #F4F0EA;
+
+    --remover-bg: #C75A5A;
+    --remover-bg-hover: #F29B9B;
+
+    --editar-bg: #E3D6C7;
+    --editar-bg-hover: #CBB9A4;
+
+    --input-borda: #8F8378;
+    --input-shadow: #1f1b1888;
+    --input-focus: #F29B9B;
+
+    --item-fundo: #3B322E;
+    --item-feito-texto: #9B928A;
+    --item-feito-opacity: 0.4;
+
+    --footer-bg: #2F2824;
+    --footer-texto: #F4F0EA;
+
+    --sombra: rgba(0, 0, 0, 0.25);
+    --borda-container: #72675D;
+
+    --cor-fundo-header: #2B2522;
+    --cor-texto-header: #F4F0EA;
+    --cor-borda: #72675D;
+    --cor-hover: #5A504B;
+    --cor-fundo-body: #25201D;
+    --cor-fundo-container: #362F2B;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--cor-fundo-body);
+    flex-direction: column;
+}
+
+.header {
+    background-color: var(--cor-fundo-header);
+    padding: 1em;
+    box-shadow: 0 2px 4px var(--sombra);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    max-width: 600vh;
+    margin: 0 auto;
+}
+
+#alternar-tema {
+    background-color: transparent;
+    color: var(--cor-texto-header);
+    border: 1px solid var(--cor-borda);
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#alternar-tema:hover {
+    background-color: var(--cor-hover);
+}
+
+.container {
+    flex: 1;
+    text-align: center;
+    background-color: var(--cor-fundo-container);
+    padding: 20px;
+    border-radius: 8px;
+    align-items: stretch;
+    box-shadow: 0 4px 8px #0000003d;
+    width: 90%;
+    max-width: 600px;
+    border: 2px solid var(--borda-container);
+    margin: 2em auto 0 auto;
+}
+
+h1 {
+    color: var(--texto-primario);
+}
+
+p {
+    color: var(--texto-primario);
+    font-size: 1.1em;
+}
+
+#mensagem {
+    min-height: 1.5em;
+    margin-bottom: 10px;
+    transition: color 0.7s ease, opacity 0.4s ease;
+}
+
+button {
+    background-color: var(--botao-bg);
+    color: var(--botao-texto);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    opacity: 0.7;
+    box-shadow: 0 2px 8px var(--sombra);
+    transition: background-color 1s ease, color 0.4s ease;
+}
+
+button:hover {
+    background-color: var(--botao-bg-hover);
+    color: var(--botao-texto);
+    opacity: 0.8;
+    box-shadow: 0 2px 8px var(--sombra);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    background-color: var(--botao-bg);
+    color: var(--texto-primario);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 2px 4px var(--sombra);
+    transition: color 0.4s ease, opacity 0.4s ease;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid var(--input-borda);
+    border-radius: 2em;
+    font-size: 1em;
+    box-shadow: inset 0 2px 9px var(--input-shadow);
+    outline: none;
+    transition: border-color 0.3s ease;
+    opacity: 0.8;
+}
+
+input[type="text"]:focus {
+    border-color: var(--input-focus);
+    box-shadow: inset 0 2px 4px rgba(96, 4, 26, 0.3);
+}
+
+button.remover {
+    background-color: var(--remover-bg);
+    color: var(--texto-invertido);
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+    margin-left: 5px;
+    right: 10px;
+    top: 50%;
+    transition: background-color 0.3s ease;
+}
+
+button.remover:hover {
+    background-color: var(--remover-bg-hover);
+}
+
+button.editar {
+    background-color: var(--editar-bg);
+    color: var(--texto-invertido);
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.editar:hover {
+    background-color: var(--editar-bg-hover);
+}
+
+.botao_lista {
+    background-color: var(--remover-bg);
+}
+
+.botao_lista:hover {
+    background-color: var(--remover-bg-hover);
+    color: var(--texto-invertido);
+}
+
+.feito {
+    text-decoration: line-through;
+    color: var(--item-feito-texto);
+    opacity: var(--item-feito-opacity);
+}
+
+.botoes-tarefa {
+    position: absolute;
+    transform: translateY(-60%);
+    right: 10px;
+    top: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2px;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    padding: 10px 0;
+    margin-top: 4em;
+    text-align: center;
+    border-top: 1px solid var(--input-borda);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-container p {
+    color: var(--footer-texto);
+    font-size: 0.9em;
+    margin-top: 6px;
+}
+
+.footer-container img {
+    max-width: 2em;
+    height: 2em;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-container img:hover {
+    opacity: 1;
+}
