@@ -10,7 +10,7 @@
   <header class="header">
     <div class="header-container">
       <!--<h1>To Do List</h1> -->
-      <button id="alternar-tema">🌙 Tema</button>
+      <button id="alternar-tema">🌙 Tema</button> 
     </div>
   </header>
   <div class="container">
@@ -19,11 +19,14 @@
     <input type="text" id="inputTarefa" placeholder="Digite sua tarefa">
     <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
     <p id="mensagem"></p>
+    <div>
+      <button onclick="limparLista()">Limpar Lista</button>
+    </div>
     <ul id="listaTarefas">
-        <!-- As tarefas serão adicionadas aqui -->
+      <!-- As tarefas serão adicionadas aqui -->
     </ul>
   </div>
-
+  
   <script src="script.js"></script>
 
   <footer>
