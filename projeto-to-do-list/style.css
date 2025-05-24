@@ -159,6 +159,13 @@ button:hover {
     opacity: 0.8;
     box-shadow: 0 2px 8px var(--sombra);
 }
+.container-botao-limpar {
+    text-align: center;
+    margin-top: 10px;
+}
+#botaoLimpar {
+    display: block;
+}
 
 ul {
     list-style: none;
